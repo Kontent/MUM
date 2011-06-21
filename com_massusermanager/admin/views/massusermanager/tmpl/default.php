@@ -1,4 +1,16 @@
-<?php defined('_JEXEC') or die('Restricted access'); ?>
+<?php 
+ 
+ /**
+ * Kontent Mass User Manager
+ * @version 	$Id: default.php
+ * @package 	Kontent Mass User Manager
+ * @copyright 	(C) 2010-2011 Kontent Design. All rights reserved.
+ * @license 	http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @link 		http://extensions.kontentdesign.com
+ **/
+ 
+ 
+ defined('_JEXEC') or die('Restricted access'); ?>
 <form action="index.php" method="post" name="adminForm">
 <table>
         <tr>

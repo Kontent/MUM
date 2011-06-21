@@ -1,12 +1,14 @@
 <?php
-/**
- * @version		$Id: install.php 981 2010-06-15 18:38:02Z robs $
- * @package		JXtended.Finder
- * @subpackage	com_finder
- * @copyright	Copyright (C) 2007 - 2010 JXtended, LLC. All rights reserved.
- * @license		GNU General Public License
- * @link		http://jxtended.com
- */
+
+ /**
+ * Kontent Mass User Manager
+ * @version 	$Id: install.php
+ * @package 	Kontent Mass User Manager
+ * @copyright 	(C) 2010-2011 Kontent Design. All rights reserved.
+ * @copyright   (C) 2007 - 2010 JXtended, LLC. All rights reserved.
+ * @license 	http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @link 		http://extensions.kontentdesign.com
+ **/
 
 defined('_JEXEC') or die;
 

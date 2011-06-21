@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Id: manifest.xml 1092 2010-11-17 22:35:06Z robs $ -->
 <install type="component" version="1.5.0" method="upgrade">
 	<name>Mass User Manager</name>
-	<author>Vukadin Njegos</author>
+	<author>Kontent Design</author>
 	<copyright>Copyright (C) 2011. All rights reserved.</copyright>
 	<creationDate>May 2011</creationDate>
 	<license>GNU General Public License</license>
-	<authorEmail>info@google.com</authorEmail>
-	<authorUrl>http://google.com/</authorUrl>
+	<authorEmail>contact@kontentdesign.com</authorEmail>
+	<authorUrl>http://extensions.kontentdesign.com/</authorUrl>
 	<version>1.0</version>
-	<description>Description of Component</description>
+	<description>Mass management of users</description>
 
 	<!-- Install and Uninstall Files -->
 	<installfile>install/install.php</installfile>

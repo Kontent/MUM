@@ -1,10 +1,12 @@
 <?php
-/**
- * @package    Joomla.Tutorials
- * @subpackage Components
- * @link http://docs.joomla.org/Developing_a_Model-View-Controller_Component_-_Part_4
- * @license    GNU/GPL
- */
+ /**
+ * Kontent Mass User Manager
+ * @version 	$Id: massusermanager.php
+ * @package 	Kontent Mass User Manager
+ * @copyright 	(C) 2010-2011 Kontent Design. All rights reserved.
+ * @license 	http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @link 		http://extensions.kontentdesign.com
+ **/
 
 // No direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );

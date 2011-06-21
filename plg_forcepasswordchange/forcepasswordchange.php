@@ -1,12 +1,15 @@
 <?php
-/**
- * @package        Force Password Change
- * @copyright (C) 2010 by Source Coast - All rights reserved
- * http://www.sourcecoast.com
- * http://www.cmsmarket.com
- * http://www.covertapps.com
- * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
- */
+
+ /**
+ * Kontent Mass User Manager
+ * @version 	$Id: forcepasswordchange.php
+ * @package 	Kontent Mass User Manager
+ * @copyright 	(C) 2010-2011 Kontent Design. All rights reserved.
+ * @copyright   (C) 2010 by Source Coast - All rights reserved
+ * @license 	http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @link 		http://extensions.kontentdesign.com
+ **/
+
 
 // no direct access
 defined('_JEXEC') or die('Restricted access');
