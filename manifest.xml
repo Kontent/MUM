@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: manifest.xml 1092 2010-11-17 22:35:06Z robs $ -->
+<install type="component" version="1.5.0" method="upgrade">
+	<name>Mass User Manager</name>
+	<author>Vukadin Njegos</author>
+	<copyright>Copyright (C) 2011. All rights reserved.</copyright>
+	<creationDate>May 2011</creationDate>
+	<license>GNU General Public License</license>
+	<authorEmail>info@google.com</authorEmail>
+	<authorUrl>http://google.com/</authorUrl>
+	<version>1.0</version>
+	<description>Description of Component</description>
+
+	<!-- Install and Uninstall Files -->
+	<installfile>install/install.php</installfile>
+	<uninstallfile>install/uninstall.php</uninstallfile>
+
+	<!-- Admin Component -->
+	<administration>
+		<menu link="option=com_massusermanager" >Mass User Manager</menu>
+
+		<languages folder="com_massusermanager/admin/languages">
+			<language tag="en-GB">en-GB/en-GB.com_massusermanager.ini</language>
+		</languages>
+
+		<files folder="com_massusermanager/admin">
+			<file>controller.php</file>
+			<file>massusermanager.php</file>
+			<file>index.html</file>
+
+			<folder>controllers</folder>
+			<folder>assets</folder>
+			<folder>images</folder>
+			<folder>languages</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>install</folder>
+		</files>
+	</administration>
+        
+	<!-- Plugins -->
+	<plugins>
+
+		<plugin plugin="forcepasswordchange" group="system" title="System - Force Password Change" state="1">
+			<files folder="plg_forcepasswordchange">
+                            <filename>forcepasswordchange.php</filename>
+                            <filename>forcepasswordchange.xml</filename>
+                            <folder>forcepasswordchange</folder>
+			</files>
+
+			<languages folder="plg_forcepasswordchange/languages">
+				<language tag="en-GB">en-GB/en-GB.plg_system_forcepasswordchange.ini</language>
+			</languages>
+		</plugin>
+
+	</plugins>
+</install>
