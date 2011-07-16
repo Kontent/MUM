@@ -11,12 +11,6 @@
 // No direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
-/**
- * Hello Hello Controller
- *
- * @package    Joomla.Tutorials
- * @subpackage Components
- */
 class MassUserManagerControllerMassUserManager extends MassUserManagerController
 {
 	/**
@@ -28,7 +22,7 @@ class MassUserManagerControllerMassUserManager extends MassUserManagerController
 		parent::__construct();
 
 		// Register Extra tasks
-		$this->registerTask( 'add'  , 	'edit' );
+		$this->registerTask( 'add','edit' );
 	}
 
 	/**
@@ -40,9 +34,9 @@ class MassUserManagerControllerMassUserManager extends MassUserManagerController
 		$model = $this->getModel();
 
 		if ($model->copy_emails()) {
-			$msg = JText::_( $model->_message.' Users(s) Modified!' );
+			$msg = JText::_( $model->_message.' COM_KMUM_USERS_MODIFIED' );
 		} else {
-			$msg = JText::_( 'Error Modifying Users' );
+			$msg = JText::_( 'COM_KMUM_ERROR_MODIFYING_USERS' );
 		}
 
 		// Check the table in so it can be edited.... we are done with it anyway
@@ -59,9 +53,9 @@ class MassUserManagerControllerMassUserManager extends MassUserManagerController
 		$model = $this->getModel();
 
 		if ($model->create_random_passwords()) {
-			$msg = JText::_( $model->_message.' Users(s) Modified!' );
+			$msg = JText::_( $model->_message.' COM_KMUM_USERS_MODIFIED' );
 		} else {
-			$msg = JText::_( 'Error Modifying Users' );
+			$msg = JText::_( 'COM_KMUM_ERROR_MODIFYING_USERS' );
 		}
 
 		// Check the table in so it can be edited.... we are done with it anyway
@@ -78,9 +72,9 @@ class MassUserManagerControllerMassUserManager extends MassUserManagerController
 		$model = $this->getModel();
 
 		if ($model->force_password_change()) {
-			$msg = JText::_( $model->_message.' Users(s) Forced To Change Password!' );
+			$msg = JText::_( $model->_message.' COM_KMUM_USERS_FORCED_TO_CHANGE_PASSWORD' );
 		} else {
-			$msg = JText::_( 'Error Forced Users To Change Password' );
+			$msg = JText::_( 'COM_KMUM_ERROR_FORCED_USERS_TO_CHANGE_PASSWORD' );
 		}
 
 		// Check the table in so it can be edited.... we are done with it anyway
@@ -94,7 +88,7 @@ class MassUserManagerControllerMassUserManager extends MassUserManagerController
 	 */
 	function cancel()
 	{
-		$msg = JText::_( 'Operation Cancelled' );
+		$msg = JText::_( 'COM_KMUM_OPERATION_CANCELLED' );
 		$this->setRedirect( 'index.php?option=com_massusermanager', $msg );
 	}
 }

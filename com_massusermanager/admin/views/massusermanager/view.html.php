@@ -17,16 +17,11 @@ jimport( 'joomla.application.component.view' );
 JHTML::_('behavior.mootools');
 JHTML::_('behavior.modal');
 JHTML::_('stylesheet', 'massusermanager.css', 'administrator/components/com_massusermanager/assets/css/');
-/**
- * Hellos View
- *
- * @package    Joomla.Tutorials
- * @subpackage Components
- */
+
 class MassUserManagerViewMassUserManager extends JView
 {
 	/**
-	 * Hellos view display method
+	 * view display method
 	 * @return void
 	 **/
 	function display($tpl = null)

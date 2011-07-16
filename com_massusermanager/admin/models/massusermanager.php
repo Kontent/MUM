@@ -15,12 +15,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 jimport( 'joomla.application.component.model' );
 jimport('joomla.user.helper');
 
-/**
- * Hello Model
- *
- * @package    Joomla.Tutorials
- * @subpackage Components
- */
 class MassUserManagerModelMassUserManager extends JModel
 {
 	/**
@@ -388,90 +382,61 @@ class MassUserManagerModelMassUserManager extends JModel
                     break;
                 
                 endswitch;
-
-		return true;
-                
+		return true;               
         }
         
         private function get_unique_name($string,$id){
-            
             $db = &JFactory::getDBO();
-            
             $db->setQuery("SELECT COUNT(id) FROM #__users WHERE id <> $id AND username = '".mysql_real_escape_string($string)."' ");
             $db->query();
             $result = $db->loadResult();
-            
-            
             if($result>0){
-                
                 $new_string = $string;
-                
                 $i=1;
-                
                 while($result>0):
-                    
                    $new_string=$string.$i;
-                
                     $db->setQuery("SELECT count(id) as num FROM #__users WHERE id <> $id AND username = '".mysql_real_escape_string($new_string)."' ");
                     $db->query();
                     $result = $db->loadResult();
-                    
                     $i+=1;
-                    
                 endwhile;
-                
                 $string = $new_string;
             }
-          
             return $string;
-            
-            
         }
         
         private function send_fpc_email($username,$password,$email){
-                      
             // Set the e-mail parameters
             $config = &JFactory::getConfig();
             $sitename = $config->getValue('sitename');
             $from = $config->getValue('mailfrom');
             $fromname = $config->getValue('fromname');
             $toemail = $email;
-            $subject = JText::sprintf('FORCE_PASSWORD_CHANGE_EMAIL_SUBJECT', $sitename);
-            $body = JText::sprintf('FORCE_PASSWORD_CHANGE_EMAIL_BODY', $username );
-
+            $subject = JText::sprintf('COM_KMUM_FORCE_PASSWORD_CHANGE_EMAIL_SUBJECT', $sitename);
+            $body = JText::sprintf('COM_KMUM_FORCE_PASSWORD_CHANGE_EMAIL_BODY', $username );
             JUtility::sendMail($from, $fromname, $toemail, $subject, $body);
-           
         }
         
         private function send_crp_email($username,$password,$email){
-                      
             // Set the e-mail parameters
             $config = &JFactory::getConfig();
             $sitename = $config->getValue('sitename');
             $from = $config->getValue('mailfrom');
             $fromname = $config->getValue('fromname');
             $toemail = $email;
-            $subject = JText::sprintf('CREATE_RANDOM_PASSWORD_EMAIL_SUBJECT', $sitename);
-            $body = JText::sprintf('CREATE_RANDOM_PASSWORD_EMAIL_BODY', $username, $password  );
-
+            $subject = JText::sprintf('COM_KMUM_CREATE_RANDOM_PASSWORD_EMAIL_SUBJECT', $sitename);
+            $body = JText::sprintf('COM_KMUM_CREATE_RANDOM_PASSWORD_EMAIL_BODY', $username, $password  );
             JUtility::sendMail($from, $fromname, $toemail, $subject, $body);
-           
         }
         
         private function get_random_string($limit){
-            
             $characters ="0123456789qwertyuiopasdfghjklzxcvbnm";
-            
             $string = '';
             for($i=0;$i<$limit;$i++){
-                
                 $rand = floor(rand(0, strlen($characters)));
                 $string.=$characters{$rand};
-                
             }
-            
             return $string;
-            
         }
         
         function get_password(){
@@ -479,11 +444,9 @@ class MassUserManagerModelMassUserManager extends JModel
             $salt = JUserHelper::genRandomPassword(32);
             $crypt = JUserHelper::getCryptedPassword($password, $salt);
             $new_password = $crypt.':'.$salt;
-            
             return array(
                 $new_password,
                 $password
             );
-            
         }
 }

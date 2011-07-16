@@ -13,12 +13,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 jimport('joomla.application.component.controller');
 
-/**
- * Hello World Component Controller
- *
- * @package    Joomla.Tutorials
- * @subpackage Components
- */
 class MassUserManagerController extends JController
 {
 	/**

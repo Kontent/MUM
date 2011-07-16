@@ -46,13 +46,6 @@ class plgSystemForcePasswordChange extends JPlugin
 		$editProfileSaveTask = "save";
 		$editProfileView = "user";
 
-		// Use these for Mighty Registration
-		/*
-		$editProfileOption = "com_juser";
-		$editProfileLayout = "mydetails";
-		$editProfileSaveTask = "user_update";
-		*/
-
 		if(!$user->guest && $user->lastvisitDate == "0000-00-00 00:00:01" && $noHtml != "1")
 		{
 			// The user is not a guest and their lastvisitDate is zeros
@@ -85,7 +78,7 @@ class plgSystemForcePasswordChange extends JPlugin
 
 				$app->redirect(
 					"index.php?option=".$editProfileOption."&view=".$editProfileView."&layout=".$editProfileLayout,
-					JText::_("Update Your Password")
+					JText::_('PLG_KMUM_UPDATE_YOUR_PASSWORD')
 				);
 			}
 		}
